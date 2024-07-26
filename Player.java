@@ -32,6 +32,9 @@ public class Player{
     int attackRoll = this.rollDie(); // Attacker rolls the die
     int defendRoll = opponent.rollDie(); // Defender (opponent) rolls the die
     
+    // Print the random values rolled
+    System.out.println(this.name + " rolled " + attackRoll + " for attack.");
+    System.out.println(opponent.name + " rolled " + defendRoll + " for defense.");
     int damageCreated = this.attack * attackRoll;// Calculate attack damage
     int damageDefended = opponent.strength * defendRoll;// Calculate defended damage
     

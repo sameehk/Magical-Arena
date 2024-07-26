@@ -3,13 +3,15 @@ public class Player{
     private int health;
     private int strength;
     private int attack;
+    private String name;
     private Random random=new Random();//random object created in Random class
 
 
-    public Player(int health, int strength,int attack){
-        this.health=health;//Assigns the value of the constructor parameter health to the instance variable health
-        this.strength=strength;
-        this.attack=attack;
+    public Player(String name,int health, int strength,int attack){
+        this.name = name;
+        this.health = health;//Assigns the value of the constructor parameter health to the instance variable health
+        this.strength = strength;
+        this.attack = attack;
         
     }
     // Method to roll a six-sided die
@@ -30,7 +32,7 @@ public class Player{
     int attackRoll = this.rollDie(); // Attacker rolls the die
     int defendRoll = opponent.rollDie(); // Defender (opponent) rolls the die
     
-    int damageCreated = this.attack*attackRoll;// Calculate attack damage
+    int damageCreated = this.attack * attackRoll;// Calculate attack damage
     int damageDefended = opponent.strength * defendRoll;// Calculate defended damage
     
     int damageToOpponent =Math.max(0, damageCreated - damageDefended);// Calculate net damage
@@ -38,13 +40,16 @@ public class Player{
     
     }
 
-    public int getHealth(){
+    public int getHealth() {
         return this.health;
 
+    }
+    public String getName(){
+        return this.name;
     }
 
     // Method to display the player's current status
     public void displayStatus(){
-        System.out.println("Player{health=" + health + ", strength=" + strength + ", attack=" + attack + "}");
+        System.out.println(name + " {health=" + health + ", strength=" + strength + ", attack=" + attack + "}");
     }
 }

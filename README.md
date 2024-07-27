@@ -14,9 +14,9 @@
 ## Compile and run the Source code
 
 ##### 1. Compile the Java files using a Java compiler using command.
-    'javac Main.java'
+    `javac Main.java`
 ##### 2. Run the game using command.
-    'java Main'
+    `java Main`
 
 ## How to play
 

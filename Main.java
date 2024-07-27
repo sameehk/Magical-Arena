@@ -1,8 +1,42 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        // Create two Player objects with different attribute
-        Player playerA = new Player("PlayerA",50,5,10);
-        Player playerB = new Player("PlayerB",100,10,5);
+        Scanner scanner = new Scanner(System.in);
+
+
+        // Get player A details
+        System.out.println("Enter details for Player A:");
+        System.out.print("Name: ");
+        String nameA = scanner.nextLine();
+        System.out.print("Health: ");
+        int healthA = scanner.nextInt();
+        System.out.print("Strength: ");
+        int strengthA = scanner.nextInt();
+        System.out.print("Attack: ");
+        int attackA = scanner.nextInt();
+
+        // Get player B details
+        System.out.println("Enter the details for Player B:");
+        scanner.nextLine();// Consume the leftover newline
+        System.out.print("Name: ");
+        String nameB = scanner.nextLine();
+        System.out.print("Health: ");
+        int healthB = scanner.nextInt();
+        System.out.print("Strength: ");
+        int strengthB = scanner.nextInt();
+        System.out.print("Attack: ");
+        int attackB = scanner.nextInt();
+       
+        
+
+
+
+        // Create Player objects
+        Player playerA = new Player(nameA, healthA, strengthA, attackA);
+        Player playerB = new Player(nameB, healthB,strengthB, attackB);
+
+
 
         // Display initial status of both players
         System.out.println("Initial Status:");
@@ -33,14 +67,14 @@ public class Main {
 
         // Determine and display the winner
         if (playerA.isAlive()) {
-            System.out.println("\nPlayer A wins!");
+            System.out.println("\n" + playerA.getName() + "wins!");
 
         } else {
-            System.out.println("\nPlayer B wins!");
+            System.out.println("\n" + playerB.getName() + " wins!");
 
         }
 
-
+        scanner.close();
     }
     
 }

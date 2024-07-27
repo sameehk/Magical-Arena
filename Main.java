@@ -67,7 +67,7 @@ public class Main {
 
         // Determine and display the winner
         if (playerA.isAlive()) {
-            System.out.println("\n" + playerA.getName() + "wins!");
+            System.out.println("\n" + playerA.getName() + " wins!");
 
         } else {
             System.out.println("\n" + playerB.getName() + " wins!");
